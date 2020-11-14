@@ -167,3 +167,12 @@ function btnClick() {
   // Vaciando el Array de los tiempos para iniciar nuevos procesos
   arrayTiempoProcesos = [];
 }
+
+// Funcion para abrir información
+const openInfo = () => {
+  swal({
+    title: "Información",
+    text: "Es un método para seleccionar todos los abstractos en un grupo de manera equitativa y en un orden racional, normalmente comenzando por el primer elemento de la lista hasta llegar al último y empezando de nuevo desde el primer elemento. En operaciones computacionales, un método para ejecutar diferentes procesos de manera concurrente, para la utilización equitativa de los recursos del equipo, es limitando cada proceso a un pequeño período (quantum)  y luego suspendiendo este proceso para dar oportunidad a otro proceso y así sucesivamente.",
+    button: "Ok",
+  });
+}

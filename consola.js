@@ -45,7 +45,11 @@ while(tiempoTotal > 0){
       j++;
     }
   } else{
-    j++
+    if(j == (cantidad-1)){
+      j = 0;
+    }else{
+      j++;
+    }
   }
 }
 
