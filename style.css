@@ -1,0 +1,268 @@
+/* Realizado por Juan David Hdez @jdhl27 */
+
+@font-face {
+  font-family: fuente;
+  src: url("font.woff2");
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: fuente;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  background-color: #FF5722;
+}
+
+.title h1{
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+.container-primary{
+  padding-top: 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container-left{
+  width: 44%;
+}
+
+.container-left label{
+  display: block;
+  width: 30%;
+  margin-left: 18.3vw;
+  margin-top: 2vw;
+  animation-duration: 3s;
+  animation-name: slideinLabel;
+}
+
+.container-left input{
+  display: block;
+  margin-left: 18vw;
+  margin-top: 1vw;
+  border: 1px solid #d8d8d8;
+  padding: 9px;
+  border-radius: 6px;
+  animation-duration: 3s;
+  animation-name: slideinInput;
+  font-family: 'fuente';
+}
+
+.container-left input:focus {
+  outline: none;
+}
+
+.btn-submit{
+  background-color: #58a700;
+  color: #fff;
+  border-color: #0000;
+  border-radius: 18px;
+  border-bottom: 5px solid #314c13;
+  padding: 6px 5px;
+  display: block;
+  width: 21%;
+  text-align: center;
+  margin-left: 19.5vw;
+  margin-top: 1vw;
+  animation-duration: 3s;
+  animation-name: slideinBtn;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #78bd2a;
+}
+
+.btn-submit:active {
+  border-bottom: 0;
+  margin-top: 15px;
+}
+
+.plus{
+  padding: 1px 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-weight: 600;
+  background-color: #fff;
+  color: #58a700;
+}
+
+.title-time{
+  display:none;
+  margin-left: 18vw;
+  width: 30%;
+  text-align: center;
+}
+
+.tiemposAgregados{
+  font-weight: 100;
+  background-color: #d1f1ff;
+  border: 1px solid #2196F3;
+  border-radius: 5px;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display:none;
+  width: 37%;
+  margin-left: 16.3vw;
+  text-align: center;
+}
+
+.tiemposAgregados::-webkit-scrollbar{
+  width:2px;
+}
+
+.tiemposAgregados::-webkit-scrollbar-thumb {
+  background: #2196f3;
+  border-radius: 8px;
+}
+
+.btn-enviar {
+  background-color: #2196F3;
+  border-bottom-color: #304b61;
+  display: none;
+  animation: none;
+}
+
+.btn-enviar:hover {
+  background-color: #58b4fd;
+}
+
+.btn-enviar:active {
+  border-bottom: 0;
+  margin-top: 15px;
+}
+
+.messageError {
+  width: 52%;
+  padding: 14px;
+  text-align: center;
+  background-color: #fdd3d3;
+  border: 1px solid #f00;
+  border-radius: 7px;
+  margin-top: 2vw;
+  margin-left: 13vw;
+  display: none;
+}
+
+.container-right{
+  width: 44%;
+  display: flex;
+}
+
+.table-content{
+  width: 50%;
+  justify-content: center;
+  background-color: #0ff;
+  background: #fff;
+  border-radius: 6px;
+  border: none;
+  color: #484848;
+  display: inline-block;
+  height: 400px;
+  margin: 20px;
+  position: relative;
+  transition: margin 0.3s ease;
+  box-shadow: 0 6px 23px 0 rgba(0,0,0,0.1);
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.table-content:hover {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.table-content h3{
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.process-content{
+  overflow: auto;
+  height: 0;
+  padding-left: 11px;
+  transition-timing-function: linear;
+  transition: height 4s;
+}
+
+.info-process{
+}
+
+.process-content::-webkit-scrollbar{
+  width:6px;
+}
+
+.process-content::-webkit-scrollbar-thumb {
+  background: #ff5722;
+  border-radius:5px;
+}
+
+.container-secundary{
+  width: 100%;
+  display: flex;
+}
+
+.progress-bar{
+  width: 0%;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  margin-left: 12vw;
+  margin-top: 3vw;
+  transition-timing-function: linear;
+  transition: width 4s;
+}
+
+.process{
+  height: 25px;
+  border-radius: 10px;
+  float: left;
+  text-align: center;
+}
+
+/* Animacion */
+@keyframes slidein {
+  from {
+    margin-left: 10%;
+  }
+
+  to {
+    margin-left: 20px;
+  }
+}
+
+@keyframes slideinBtn {
+  from {
+    margin-left: 20%;
+  }
+
+  to {
+    margin-left: 19.5vw;
+  }
+}
+
+@keyframes slideinInput {
+  from {
+    margin-left: 20%;
+  }
+
+  to {
+    margin-left: 18vw;
+  }
+}
+
+@keyframes slideinLabel {
+  from {
+    margin-left: 20%;
+  }
+
+  to {
+    margin-left: 18.3vw;
+  }
+}

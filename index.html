@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Algoritmo Round Robin</title>
+</head>
+<body>
+
+  <div class="title">
+    <h1>ROUND ROBIN</h1>
+  </div>
+  <div class="container-primary">
+    <div class="container-left">
+      <label for="time">Tiempo de ejecución</label>
+      <input type="number" name="time" id="time">
+      <a onclick="btnAdd()" class="btn-submit">Agregar <span class="plus">+</span></a>
+      <h3 class="title-time">Tiempos: </h3>
+      <div class="tiemposAgregados" id="tiemposAgregados"></div>
+      <a onclick="btnClick()" class="btn-submit btn-enviar" id="btn-enviar">Ejecutar</a>
+      <div class="messageError" id="messageError">
+        <span>Ingrese un número mayor a cero</span>
+      </div>
+    </div>
+    <div class="container-right">
+      <div class="table-content">
+        <h3>Particiones</h3>
+        <div id="process-content" class="process-content">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-secundary">
+    <div class="progress-bar" id="progress-bar">
+    </div>
+  </div>
+
+
+  <script src="home.js"></script>
+</body>
+</html>
